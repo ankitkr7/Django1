@@ -1,0 +1,1 @@
+default_app_congif = 'codes.apps.CodesConfig'
