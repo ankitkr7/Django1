@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+
+	func(int n,double m,vector<double>& v)
+	{
+
+	
+	int count=0;
+	
+	  for(int i=0;i<v.size();i++)
+	   {int j=0;
+	     
+	    while(j<n && m>=v[i])
+	    {
+	   	  m-= v[i];
+	   	  count++;
+	   	  j++;
+	     }
+	     
+	     if(m==0)
+	     return count;
+	     
+	   }
+	   
+	   //not possible to make the change
+	   return -1;
+	}
+
+
+int main() {
+	
+	//m is the amount
+	//n is the supply of each of the coins
+	//assuming n supply of each coins
+	double m;
+	int n;
+	cin>>n;
+	cin>>m;
+	
+	double a=0.75,b=0.5,c=0.25;
+	
+	vector<double> v(3);
+	v.push_back(a);
+	v.push_back(b);
+	v.push_back(c);
+	
+	
+	int ans = func(n,m,v);
+	
+	return 0;
+}
